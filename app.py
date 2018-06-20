@@ -15,6 +15,7 @@ app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
 
 
+
 # Define models
 roles_users = db.Table(
     'roles_users',
@@ -96,7 +97,7 @@ def index():
 # Create admin
 admin = flask_admin.Admin(
     app,
-    'Dashboard Example',
+    'Rouge Mobile',
     base_template='my_master.html',
     template_mode='bootstrap3',
 )
