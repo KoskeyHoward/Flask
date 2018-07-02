@@ -10,7 +10,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Flask-Admin dashboard login template">
-  <meta name="author" content="Jonathan Ars">
   {% endblock head_meta %}
 
   {% block head_css %}
@@ -178,8 +177,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        {% block main_menu %}
-        {{ layout.menu() }}
+        {% block main_menu %}     
         {% endblock %}
         <li>
           <a href="#">
@@ -188,25 +186,25 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{url_for('campaigns')}}">
             <i class="fa fa-envelope"></i> <span>Campaigns</span>
             
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{url_for('draws')}}">
             <i class="fa fa-envelope"></i> <span>Draws</span>
             
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{url_for('rewards')}}">
             <i class="fa fa-envelope"></i> <span>Rewards</span>
             
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="{{url_for('messages')}}">
             <i class="fa fa-envelope"></i> <span>Messages</span>
             
           </a>
@@ -378,12 +376,7 @@
   <div class="control-sidebar-bg"></div>
 
   <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 0.1
-    </div>
-     <strong>Copyright &copy; 2017 <a href="https://github.com/jonalxh">Jonathan Ars</a>.</strong> -
-    <strong>Original Template <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+     <strong>Copyright &copy; 2018 <a href="#">Howard Koskey</a></strong> 
   </footer>
   {% endif %}
 
