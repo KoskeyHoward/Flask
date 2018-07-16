@@ -78,7 +78,7 @@ class MyModelView(sqla.ModelView):
                 return redirect(url_for('security.login', next=request.url))
 
 
-    can_edit = False
+    can_edit = True
     create_modal = True
     can_export = True
 
@@ -93,6 +93,24 @@ class CustomView(MyModelView):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/admin/clients')
+def clients():
+    return render_template('admin/clients.html')
+@app.route('/admin/campaigns')
+def campaigns():
+    return render_template('admin/campaigns.html')
+    pass
+@app.route('/admin/draws')
+def draws():
+    return render_template('admin/draws.html')
+@app.route('/admin/rewards')
+def rewards():
+    return render_template('admin/rewards.html')
+@app.route('/admin')
+def messages():
+    return render_template('admin/messages.html')
+
 
 # Create admin
 admin = flask_admin.Admin(
